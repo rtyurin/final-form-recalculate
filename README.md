@@ -1,10 +1,7 @@
-# 🏁 Final Form Calculate
+# 🏁 Final Form (Re)-Calculate
 
-[![NPM Version](https://img.shields.io/npm/v/final-form-calculate.svg?style=flat)](https://www.npmjs.com/package/final-form-calculate)
-[![NPM Downloads](https://img.shields.io/npm/dm/final-form-calculate.svg?style=flat)](https://www.npmjs.com/package/final-form-calculate)
-[![Build Status](https://travis-ci.org/final-form/final-form-calculate.svg?branch=master)](https://travis-ci.org/final-form/final-form-calculate)
-[![codecov.io](https://codecov.io/gh/final-form/final-form-calculate/branch/master/graph/badge.svg)](https://codecov.io/gh/final-form/final-form-calculate)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+This is a fork of [Final Form Calculate](https://github.com/final-form/final-form-calculate). Made it because owner of the repo doesn't respond nor merge existing PR's.
+This fork contains a few merged pull requests such as [this](https://github.com/final-form/final-form-calculate/pull/39) which fixes typings.
 
 Decorator for [🏁 Final Form](https://github.com/final-form/final-form) that
 allows you to define calculations that happen between fields, i.e. "When field X
@@ -15,20 +12,20 @@ changes, update field Y."
 ## Installation
 
 ```bash
-npm install --save final-form-calculate
+npm install --save final-form-recalculate
 ```
 
 or
 
 ```bash
-yarn add final-form-calculate
+yarn add final-form-recalculate
 ```
 
 ## Usage
 
 ```js
 import { createForm, getIn } from 'final-form'
-import createDecorator from 'final-form-calculate'
+import createDecorator from 'final-form-recalculate'
 
 // Create Form
 const form = createForm({ onSubmit })
