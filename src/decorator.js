@@ -5,9 +5,9 @@ import { getIn } from 'final-form'
 import isPromise from './isPromise'
 
 const tripleEquals = (a: any, b: any) => a === b
-const createDecorator = (...calculations: Calculation[]): Decorator => (
-  form: FormApi
-) => {
+const createDecorator = <FormValues: Object>(
+  ...calculations: Calculation[]
+): Decorator<FormValues> => (form: FormApi<FormValues>) => {
   let previousValues = {}
   const unsubscribe = form.subscribe(
     ({ values }) => {

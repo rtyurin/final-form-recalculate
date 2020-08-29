@@ -2,7 +2,7 @@ import { Decorator } from 'final-form'
 
 export type FieldName = string
 
-export type FieldPattern = FieldName | RegExp | FieldName[]
+export type FieldPattern = FieldName | RegExp | (FieldName | RegExp)[]
 
 export type UpdatesByName = {
   [FieldName: string]: (value: any, allValues?: Object, prevValues?: Object) => any
@@ -23,6 +23,6 @@ export type Calculation = {
   isEqual?: (a: any, b: any) => boolean,
 }
 
-export default function createDecorator(
+export default function createDecorator<FormValues = object>(
   ...calculations: Calculation[]
-): Decorator
+): Decorator<FormValues>
